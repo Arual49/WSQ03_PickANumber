@@ -1,0 +1,19 @@
+import random
+
+correct = random.randrange(1,101)
+x = 0
+
+print ("Let´s play a game! Guess what number I'm thinking in! I'll give you a hint is between 1 and 100")
+
+guess = int( input ())
+
+while guess!=correct:
+	x = x + 1
+	if guess < correct:
+		print ("Go higher!")
+	else:
+		print ("Go lower!")
+	guess = int( input ())
+
+	
+print ("Correct! Congrats! You took " + str(x) + " tries to guess")
